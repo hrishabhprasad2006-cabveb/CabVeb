@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d0b">
+
+  <title>CabVeb | Pahad Ka Safar, Next Level</title>
+
+  <meta name="description"
+    content="Discover a smarter way to plan your Uttarakhand journey with CabVeb. Explore cab and seat booking options and connect with us on WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-icon">CV</span>
+      CabVeb<span class="logo-dot">....</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#routes">Routes</a>
+      <a href="#how">How it works</a>
+      <a href="#drivers">For drivers</a>
+      <a href="#booking" class="nav-cta">Book a ride ↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: MOUNTAIN ROAD BACKGROUND -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="live-dot"></span>
+          MADE FOR THE MOUNTAINS
+        </div>
+
+        <h1>Pahad ka safar,<br>
+          <span>next level.</span>
+        </h1>
+
+        <p class="hero-description">
+          Your journey, your people, your way.
+          Explore a smarter way to plan your next ride
+          across Uttarakhand.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">
+            Plan your ride <span>↗</span>
+          </a>
+          <a href="#routes" class="btn btn-glass">
+            Explore routes ↓
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span>⌁</span> From familiar roads to new destinations.
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>UTTARAKHAND · INDIA</span>
+        <span>YOUR JOURNEY STARTS HERE ↓</span>
+      </div>
+    </section>
+
+    <!-- INTRO STRIP -->
+    <section class="intro-strip">
+      <p>OLD-SCHOOL SEARCHING.</p>
+      <span class="strip-arrow">→</span>
+      <p class="green-text">NEW-AGE TRAVEL PLANNING.</p>
+    </section>
+
+    <!-- ABOUT / FEATURES -->
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <span class="section-label">01 / THE CABVEB WAY</span>
+        <h2>Travel your<br><span>terms.</span></h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-photo">
+          <div class="photo-caption">
+            <span>THE MOUNTAINS ARE CALLING</span>
+            <span>01 — 04</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="large-copy">
+            Pahadon ka raasta apna hai.
+            Safar ko simple banana hai.
+          </p>
+
+          <p class="muted">
+            CabVeb is building a simpler way to explore
+            cab and individual-seat booking options.
+            Share your journey details with us and
+            connect through WhatsApp.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature">
+              <span class="feature-number">01</span>
+              <div>
+                <h3>Cab or seat</h3>
+                <p>Tell us whether you need a whole cab
+                  or an individual seat.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <span class="feature-number">02</span>
+              <div>
+                <h3>Plan your route</h3>
+                <p>Share pickup, destination, date and
+                  preferred travel time.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <span class="feature-number">03</span>
+              <div>
+                <h3>Connect on WhatsApp</h3>
+                <p>Discuss availability and fare before
+                  confirming your journey.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#booking" class="text-link">
+            Start planning your trip ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking-section section" id="booking">
+      <div class="booking-layout">
+        <div class="booking-copy">
+          <span class="section-label">02 / YOUR NEXT RIDE</span>
+          <h2>Where are we<br>going <span>next?</span></h2>
+          <p class="muted">
+            Tell us a little about your journey.
+            Your booking request will open in WhatsApp.
+          </p>
+
+          <div class="booking-badges">
+            <span>↗ Cab booking</span>
+            <span>↗ Seat enquiry</span>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-heading">
+            <h3>Plan your journey</h3>
+            <span class="form-tag">QUICK ENQUIRY</span>
+          </div>
+
+          <label for="rideType">What do you need?</label>
+          <select id="rideType" name="rideType" required>
+            <option value="Full cab">Full cab</option>
+            <option value="Individual seat">Individual seat</option>
+          </select>
+
+          <div class="form-row">
+            <div>
+              <label for="pickup">Pickup location</label>
+              <input id="pickup" name="pickup"
+                type="text" placeholder="e.g. Haldwani" required>
+            </div>
+            <div>
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination"
+                type="text" placeholder="e.g. Pithoragarh" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="travelDate">Travel date</label>
+              <input id="travelDate" name="travelDate"
+                type="date" required>
+            </div>
+            <div>
+              <label for="passengers">Passengers</label>
+              <select id="passengers" name="passengers" required>
+                <option value="1">1 passenger</option>
+                <option value="2">2 passengers</option>
+                <option value="3">3 passengers</option>
+                <option value="4">4 passengers</option>
+                <option value="5">5 passengers</option>
+                <option value="6">6 passengers</option>
+                <option value="7+">7+ passengers</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="travelTime">Preferred time</label>
+            <input id="travelTime" name="travelTime"
+              type="time" required>
+          </div>
+
+          <label for="extraDetails">Extra details (optional)</label>
+          <textarea id="extraDetails" name="extraDetails"
+            rows="3" placeholder="Return trip, luggage, or anything else..."></textarea>
+
+          <button type="submit" class="btn btn-primary submit-btn">
+            Send booking enquiry on WhatsApp ↗
+          </button>
+
+          <p class="form-disclaimer">
+            This sends an enquiry, not a confirmed booking.
+            Fare and availability must be confirmed separately.
+          </p>
+          <p class="form-error" id="formError" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ROUTES: SEPARATE PHOTO CARDS -->
+    <section class="section routes-section" id="routes">
+      <div class="section-top">
+        <div>
+          <span class="section-label">03 / FIND YOUR WAY</span>
+          <h2>Routes worth<br><span>the ride.</span></h2>
+        </div>
+        <p class="muted section-side-copy">
+          Familiar places. Beautiful roads.
+          Your next mountain journey starts with a plan.
+        </p>
+      </div>
+
+      <div class="routes-grid">
+
+        <article class="route-card route-one">
+          <div class="route-top">
+            <span class="route-index">ROUTE 01</span>
+            <span class="route-symbol">↗</span>
+          </div>
+          <div class="route-info">
+            <span>THE GATEWAY TO THE HILLS</span>
+            <h3>Haldwani</h3>
+            <p>Plan a journey from the foothills.</p>
+            <button class="route-button" type="button"
+              data-pickup="Haldwani" data-destination="Pithoragarh">
+              Plan this route ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="route-card route-two">
+          <div class="route-top">
+            <span class="route-index">ROUTE 02</span>
+            <span class="route-symbol">↗</span>
+          </div>
+          <div class="route-info">
+            <span>DEEP IN THE HIMALAYAS</span>
+            <h3>Pithoragarh</h3>
+            <p>Explore your next mountain escape.</p>
+            <button class="route-button" type="button"
+              data-pickup="Haldwani" data-destination="Pithoragarh">
+              Plan this route ↗
+            </button>
+          </div>
+        </article>
+
+        <article class="route-card route-three">
+          <div class="route-top">
+            <span class="route-index">ROUTE 03</span>
+            <span class="route-symbol">↗</span>
+          </div>
+          <div class="route-info">
+            <span>THE QUIET SIDE OF UTTARAKHAND</span>
+            <h3>Gangolihat</h3>
+            <p>Set your destination. Start planning.</p>
+            <button class="route-button" type="button"
+              data-pickup="Haldwani" data-destination="Gangolihat">
+              Plan this route ↗
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="routes-note">
+        These are example routes, not live schedules.
+        Availability and service coverage must be confirmed.
+      </p>
+    </section>
+
+    <!-- HOW IT WORKS: BACKGROUND PHOTO -->
+    <section class="how-section" id="how">
+      <div class="how-overlay"></div>
+      <div class="how-content">
+        <span class="section-label">04 / KEEP IT SIMPLE</span>
+        <h2>Less searching.<br><span>More exploring.</span></h2>
+
+        <div class="steps-grid">
+          <div class="step">
+            <span>01</span>
+            <h3>Share your plan</h3>
+            <p>Choose your route, date and ride type.</p>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <h3>Connect with us</h3>
+            <p>Send the details through WhatsApp.</p>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <h3>Confirm the ride</h3>
+            <p>Check availability and fare before travelling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DRIVER PARTNERS -->
+    <section class="section drivers-section" id="drivers">
+      <div class="drivers-photo">
+        <div class="drivers-photo-label">
+          BUILT FOR THE ROADS WE CALL HOME
+        </div>
+      </div>
+
+      <div class="drivers-copy">
+        <span class="section-label">05 / DRIVER PARTNERS</span>
+        <h2>Apni gaadi.<br>Apne pahad.<br><span>New opportunities.</span></h2>
+
+        <p class="muted">
+          Are you a driver in Uttarakhand?
+          Connect with CabVeb to discuss ride enquiries
+          and possible partnership opportunities.
+        </p>
+
+        <ul class="driver-points">
+          <li>✓ Share your route and vehicle details</li>
+          <li>✓ Discuss suitable ride requests</li>
+          <li>✓ Stay in touch through WhatsApp</li>
+        </ul>
+
+        <a class="btn btn-primary"
+          href="https://wa.me/917500135075?text=Hello%20CabVeb%2C%20I%20want%20to%20join%20as%20a%20driver%20partner."
+          target="_blank" rel="noopener noreferrer">
+          Join as a driver ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- BRAND CTA -->
+    <section class="final-cta">
+      <span class="section-label">YOUR PAHAD. YOUR JOURNEY.</span>
+      <h2>Ready to take<br>the <span>next turn?</span></h2>
+      <a href="#booking" class="btn btn-dark">
+        Plan your journey ↗
+      </a>
+      <div class="cta-decoration">CV.</div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="#home" class="logo">
+      <span class="logo-icon">CV</span>
+      CabVeb<span class="logo-dot">...</span>
+    </a>
+
+    <p>Made with love for the roads of Uttarakhand.</p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#routes">Routes</a>
+      <a href="#booking">Booking</a>
+      <a href="#drivers">Drivers</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> CabVeb. All rights reserved.
+    </p>
+    <p class="footer-disclaimer">
+      CabVeb is developing its ride enquiry service.
+      Bookings are subject to confirmation.
+    </p>
+  </footer>
+
+</body>
+</html>
